@@ -1,0 +1,11 @@
+What is Cascading Style Sheets (CSS)?  Why do we need to use CSS?
+
+Contrast the inline, embedded and a external approaches to doing CSS.
+
+Colors are often specified in terms of their RGB values. Describe the RGB color model.
+
+How can Images be applied to a Website?
+
+What are techniques and principles for Separating Content and doing the Layout of Content on our Web Pages
+
+How do we go about specifying Fonts?

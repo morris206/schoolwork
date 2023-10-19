@@ -1,0 +1,14 @@
+struct node
+int data
+node next
+
+function to remove node and free memory
+make temporary pointer to node to be deleted (before_del->next = temp->next) then delete temp
+store value of prt7 and ptr9 in a temporary variable
+prev->next = temp to relink rest of list
+	
+
+
+in main function
+in function find head pointer, then iterate through list with head->next and stop at node 8
+

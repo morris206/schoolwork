@@ -1,0 +1,114 @@
+include iostream string vector ctime cstldlib
+
+base class pokemon
+declare name hp attack defense speed
+
+constructor 
+
+foo tookdamage(int damage)
+hp -= damage
+if damage is lessthan 0,
+hp = 0
+
+
+foo isalive
+return if hp is more than 0
+
+perform move(Pokemon& opponent)
+ouput name useda  basic move
+calc damage attack - opp.defense
+if damage is less than 0
+damage = 0
+opponent.takeDamage(damage) // pass damage
+output opponent.name took damamge damage
+
+class starterpokemon: public pokemon
+move struct with name and damage
+
+declar vector var for move vector<Move> moves
+construct starterpokemon include moves
+
+foo perfomr move
+output choose move for name
+for loop size_t i = 0 i < moves.size() ++i
+	output i + 1 << moves[i].name (damage << moves.damage <<
+
+choice var
+input choice
+
+if choice is greater than or equal to 1 and choice is less than or equal to (cast int to moves.size()
+	selected move var = moves[choice - 1]
+	output name used selectedmove.name 
+	declar damage car = selctedmove.damage - opp.defense
+	if damage is less than 0
+	damage is 0
+	opp.take damage(damage); pass damage to takedamage
+	output opp.name took damage
+	else
+		invalid choice, using basic move
+		Pokemon::perfomMove(opp)
+
+enemy pokemon class : public pokemon
+	move strut with name and damage
+declare vector var for move
+
+	construct enemypokemon 
+
+	foo perfom move (pokemon& opp)
+	var randommoveindex = rand() % moves.size()
+	        Move selectedMove = moves[randomMoveIndex];
+	output name used selectedmove.name
+	opponent.takeDamage(damage)// pass damage
+	output opp.name took damage
+
+bool isfaster(pokemon& p1, pokemon& p2)
+	return p1.speed > p2.speed
+
+main
+    srand(static_cast<unsigned>(time(0)));
+
+ vector<StarterPokemon::Move> starterMovesCharmander = {
+        {"Ember", 70},
+        {"Scratch", 40},
+        {"Growl", 0}
+    };
+
+    StarterPokemon charmander("Charmander", 39, 52, 43, 65, starterMovesCharmander);
+	 
+   vector<EnemyPokemon> enemyPokemonPool = {
+        {"Pikachu", 35, 55, 40, 90},
+
+   int randomEnemyIndex = rand() % enemyPokemonPool.size();
+    EnemyPokemon enemy = enemyPokemonPool[randomEnemyIndex];
+
+output choose your pokeom
+	   for (size_t i = 0; i < starterPokemonList.size(); ++i) {
+        cout << i + 1 << ". " << starterPokemonList[i].name << endl;
+
+
+var startchoice
+input choice
+    if (starterChoice >= 1 && starterChoice <= static_cast<int>(starterPokemonList.size())) {
+        StarterPokemon chosenStarter = starterPokemonList[starterChoice - 1];
+
+outuput you chosenstarter.name vs enemy.name
+
+while chonestarter.isAlive and enemy.isalive
+	ifispokemonfaster(chosenstarter, enemy
+		chosenstarter.performmove(enemy)
+		if enemy.isstillalive
+			enemy.permormmove(chosenstarter)
+	else
+			enemyperformmove(chosenstarter)
+			if chosenstarter.isalive
+				chosenstarter.performmove(enemy)
+
+		if chosenstarter.isalive
+			output congrats, chosenstarter.name wins
+		else
+			output enemy.name wins
+	else
+		invalid choice
+
+	return 0
+
